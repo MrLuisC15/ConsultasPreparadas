@@ -19,7 +19,6 @@
             die("La conexión ha fallado, error número " . $db->connect_errno . ": " . $db->connect_error);
         }
 
-
         // Preparar
         $resultado = $db->prepare("INSERT INTO Clientes (nombre, ciudad, contacto) VALUES (?, ?, ?)");
         $resultado->bind_param('ssi', $nombre, $ciudad, $contacto);
